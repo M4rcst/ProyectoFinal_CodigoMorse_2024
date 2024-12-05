@@ -1,13 +1,3 @@
 # ProyectoFinal_CodigoMorse_2024
 
-Descripcion:
-Este proyecto trata de conectar dos Arduinos para que puedan enviarse y recibir mensajes usando Bluetooth, código Morse y pantallas LCD. La idea es que, con un botón, metés palabras en código Morse, el Arduino las traduce a texto y las muestra en la pantalla. Después, esa palabra se manda al otro Arduino por Bluetooth, y también aparece en su pantalla.
-Aunque aprendimos un montón sobre cómo usar módulos Bluetooth, decodificar Morse y manejar señales digitales, no logramos que el Bluetooth funcione como esperábamos. Nos complicamos bastante con cosas como configurar los módulos en modo maestro y esclavo, y ajustar bien el código, pero igual quedó un proyecto interesante para seguir trabajando.
-
-Integrantes del Proyecto: Jimena Aysana - Ariel Rubio - Marcos Torres
-
-Materia: Proyecto Informatico
-
-Año: 4º 3era
-
-Profesor: Gonzalo Consorti
+La conexión del Arduino para este proyecto incluye varios componentes: el botón de entrada de Morse está conectado al pin digital 2 con una resistencia pull-up interna activada; el botón de confirmación está en el pin digital 13 también con pull-up; el buzzer está en el pin 6 para generar sonidos; el LED de confirmación está conectado al pin 5 para indicar interacciones; la pantalla LCD se conecta a los pines 7, 8, 9, 10, 11 y 12, siguiendo el esquema típico de un LCD sin I2C; y el módulo Bluetooth utiliza los pines 10 (RX) y 11 (TX) mediante SoftwareSerial para la comunicación. Todos los componentes deben compartir una conexión a tierra (GND).
